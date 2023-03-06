@@ -14,8 +14,8 @@ export const App = () => {
       <Container>
           <React.StrictMode>
               <Profile />
-              <Statistics title="Upload stats" statistics={statistics} />
-              <FriendList friends={friends} />
+              <Statistics title="Upload stats" statistics={ statistics } />
+              <FriendList friends={ friends } />
               <TransactionHistory items={ items } />
           </React.StrictMode>
 
