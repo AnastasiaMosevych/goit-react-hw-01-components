@@ -29,7 +29,7 @@ export const TableData = styled.td`
 
 export const TableRow = styled.tr`
     text-align: center;
-    &:nth-child(even) {
+    &:nth-of-type(even) {
         background-color: #d3d3d3;
     }
 `; 

@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import user from 'user.json';
 import { ProfileContainer, Description, Avatar, UserName, TagAndLocation, Stats, StatsItem, Label, Quantity } from './Profile.styled';
 
-export const Profile = () => {
+export const Profile = ({avatar, username, tag, location, stats}) => {
     return <ProfileContainer>
         <Description>
             <Avatar
@@ -27,4 +28,16 @@ export const Profile = () => {
             </StatsItem>
         </Stats>
     </ProfileContainer>
+}
+
+Profile.propTypes = {
+    avatar: PropTypes.string,
+    username: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    stats: PropTypes.shape({
+        followers: PropTypes.number,
+        views: PropTypes.number,
+        likes: PropTypes.number
+    })
 }
