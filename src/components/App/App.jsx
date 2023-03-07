@@ -4,21 +4,19 @@ import { FriendList } from 'components/FriendList/FriendList';
 import { TransactionHistory } from 'components/Transaction/TransactionHistory';
 import { Container } from 'components/App/App.styled.js';
 import React from 'react';
-import statistics from '../../data.json';
-import friends from '../../friends.json';
-import items from '../../transactions.json';
+import user from '../../data/user.json';
+import statistics from '../../data/data.json';
+import friends from '../../data/friends.json';
+import items from '../../data/transactions.json';
 
 
 export const App = () => {
   return (
       <Container>
-          <React.StrictMode>
-              <Profile />
-              <Statistics title="Upload stats" statistics={ statistics } />
-              <FriendList friends={ friends } />
-              <TransactionHistory items={ items } />
-          </React.StrictMode>
-
-    </Container>
+      <Profile avatar={ user.avatar} username={user.username} tag={user.tag} location={user.location} stats={user.stats} />
+        <Statistics title="Upload stats" statistics={ statistics } />
+        <FriendList friends={friends} />
+        <TransactionHistory items={ items } />
+      </Container>
   )
 }
